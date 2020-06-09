@@ -1,4 +1,7 @@
-# mini-DST
-source codes of mini-DST project, originally triggered by Snowmass 2021 community study of the ILC
+These codes are used to create mini-DST files.
+Author: Shin-ichi Kawada (DESY) shin-ichi.kawada[atmk]desy.de
 
-This document explains what is doing in mini-DST project. More things will come.
+Originally triggered by Snowmass 2021 comminity planning study, but also useful for beginners who usually don't have plenty amount of knowledge of high energy physics and detector simulation.
+
+
+The purpose of mini-DST project is to provide a "minumum" set of data from fully-simulated MC samples.
