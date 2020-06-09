@@ -19,10 +19,30 @@ __These codes are under development. You can use them but your own risk. Your co
   - Only put single number on PID info. How to do it?
 - Simplify RecoMCTruthLink/MCTruthRecoLink. How to do it?
 - Which collections should be kept in mini-DST file?
+- How to add number of tracks/clusters (probably at the event header)?
+- Providing macro or library to read mini-DST file and produce ROOT file
 
-## Introduction
+# Introduction
 
 The purpose of mini-DST project is to provide a "minumum" set of data from fully-simulated MC samples.
 When we perform physics analysis, we should use full detector simulation samples to make your analysis as realistic as possible if you are allowed to use such MC samples and you are familiar with it.
 However, for beginners and theorists who are typically not familiar with how to handle with it, the full information of simulation/reconstruction is too much and too complex.
-The mini-DST project is trying to reduce such complexitity, but mini-DST file still have useful information for the analysis.
+The mini-DST project is reducing such complexitity, but mini-DST file still have useful information for the analysis.
+
+# Detail Description (WIP)
+
+We have fully-simulated MC samples named DST file which contain all information and result of simulation and reconstruction.
+In mini-DST project, we will remove complex collections and add other useful information like number of isolated objects, jets, and other variables.
+In mini-DST file, the following collections are stored.
+- PandoraPFOs
+- MCParticle (MCParticlesSkimmed)
+- PrimaryVertex, PrimaryVertex_RP
+- RecoMCThuthLink, MCTruthRecoLink
+
+The following collections are added to the mini-DST file.
+- IsolatedMuons, IsolatedElectrons
+- IsolatedTaus
+- (IsolatedPhotons)
+- RefinedNJets (N = 2, 3, 4, 5, 6)
+
+The ErrorFlow processor is added to calculate covariance matrix for jets.
