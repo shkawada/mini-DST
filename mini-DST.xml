@@ -927,6 +927,10 @@
     KinkVertices
     SplitRecoParticles
     SplitVertices
+    BuildUpVertex_RP
+    BuildUpVertex
+    BuildUpVertex_V0_RP
+    BuildUpVertex_V0
     Vertex2Jets
     Vertex3Jets
     Vertex4Jets

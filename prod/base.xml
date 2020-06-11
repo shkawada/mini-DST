@@ -891,9 +891,6 @@
     GammaGammaCandidateEtas
     GammaGammaCandidatePi0s
     GammaGammaParticles
-    PFOsminusmu
-    PFOsminuse
-    PFOsminustau
     V0RecoParticles
     V0Vertices
     ProngRecoParticles
@@ -902,6 +899,13 @@
     KinkVertices
     SplitRecoParticles
     SplitVertices
+    BuildUpVertex_RP
+    BuildUpVertex
+    BuildUpVertex_V0_RP
+    BuildUpVertex_V0
+    PFOsminusmu
+    PFOsminuse
+    PFOsminustau
     Vertex2Jets
     Vertex3Jets
     Vertex4Jets
