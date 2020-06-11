@@ -19,7 +19,8 @@ __These codes are under development. You can use them but your own risk. Your co
   - Only put single number on PID info. How to do it?
 - Simplify RecoMCTruthLink/MCTruthRecoLink. How to do it?
 - Which collections should be kept in mini-DST file?
-- How to add number of tracks/clusters (probably at the event header)?
+- How to add number of tracks/clusters (at the event header? at the header of PandoraPFOs?)?
+- How to merge collections?
 - Providing macro or library to read mini-DST file and produce ROOT file
 
 # Introduction
@@ -34,15 +35,16 @@ The mini-DST project is reducing such complexitity, but mini-DST file still have
 We have fully-simulated MC samples named DST file which contain all information and result of simulation and reconstruction.
 In mini-DST project, we will remove complex collections and add other useful information like number of isolated objects, jets, and other variables.
 In mini-DST file, the following collections are stored.
-- PandoraPFOs
-- MCParticle (MCParticlesSkimmed)
+- PandoraPFOs, BCalRecoParticle (not merged yet)
+- MCParticle (MCParticlesSkimmed in next production)
 - PrimaryVertex, PrimaryVertex_RP
-- RecoMCThuthLink, MCTruthRecoLink
+- RecoMCThuthLink, MCTruthRecoLink (kept full relation at this time being)
 
 The following collections are added to the mini-DST file.
-- IsolatedMuons, IsolatedElectrons
-- IsolatedTaus
-- (IsolatedPhotons)
-- RefinedNJets (N = 2, 3, 4, 5, 6)
+- event shape variables (used ThrustReconstruction, Sphere, Fox): these are stored at the header of PandoraPFOs
+- IsolatedMuons, IsolatedElectrons (used IsolatedLeptonTagging, not tuned)
+- IsolatedTaus (used TaJetClustering, not tuned)
+- (IsolatedPhotons) (future)
+- RefinedNJets (N = 2, 3, 4, 5, 6) (used LCFIPlus: JetClustering, JetVertexRefiner, FlavorTag, not tuned)
 
-The ErrorFlow processor is added to calculate covariance matrix for jets.
+The ErrorFlow processor is applied to calculate covariance matrix for jets.
