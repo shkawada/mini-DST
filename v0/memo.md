@@ -20,7 +20,7 @@ The ErrorFlow processor is applied to RefinedNJets to calculate covariance matri
 
 File size details:
 
-|File No|# events|DST (MB)|DST, (MB)/event|mini-DST (MB)|mini_DST, (MB)/event|
+|File No|# events|DST (MB)|DST, (MB)/event|mini-DST (MB)|mini-DST, (MB)/event|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1|12500|663|0.053|285|0.0228|
 |2|12500|663|0.053|285|0.0228|
