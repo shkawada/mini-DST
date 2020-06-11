@@ -2,6 +2,8 @@
 
 Input DST files: all physics validation samples produced with iLCSoft v02-01. see sample.txt for full path.
 
+Output mini-DST files: go to /afs/desy.de/user/s/skawada/public/mini-DST-v0
+
 In these mini-DST file, the following collections are stored.
 - PandoraPFOs, BCalRecoParticle (not merged yet, not simplified anything)
 - MCParticle
