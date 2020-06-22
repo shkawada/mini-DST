@@ -234,7 +234,8 @@
   <parameter name="isolationConeAngle" value="0.15" />
   <parameter name="isolationEnergy" value="3.5" />
   <parameter name="ptseed" value="5.0" />
-  <parameter
+  <parameter name="invariant_mass" value="2.0" />
+</processor>
 
 <processor name="FastJetYCut" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
