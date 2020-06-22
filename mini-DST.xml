@@ -7,7 +7,8 @@
   <processor name="Fox"/>
   <processor name="IsolatedMuonTagging"/>
   <processor name="IsolatedElectronTagging"/>
-  <processor name="IsolatedTauTagging"/>
+  <!--processor name="IsolatedTauTagging"/-->
+  <processor name="IsolatedTauFinder"/>
   <!--processor name="FastJetYCut"/-->
   <!--processor name="FastJet2"/-->
   <!--processor name="FastJet3"/-->
@@ -31,7 +32,8 @@
   <parameter name="LCIOInputFiles">
     /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401005.Pe2e2h.eL.pR.n000.d_dstm_14707_0.slcio
   </parameter>
-  <parameter name="MaxRecordNumber" value="10" />
+  <parameter name="MaxRecordNumber" value="50" />
+  <!--parameter name="MaxRecordNumber" value="0" /-->
   <parameter name="SkipNEvents" value="0" />
   <parameter name="SupressCheck" value="false" />
   <parameter name="Verbosity" options="DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT">ERROR</parameter>
@@ -220,6 +222,20 @@
   <parameter name="ConeMaxCosAngle" type="double">1 </parameter>
   <!--Energy fraction of cone compared to central-->
   <parameter name="ConeMaxEnergyFrac" type="double">0.1 </parameter>
+</processor>
+
+<processor name="IsolatedTauFinder" type="TauFinder">
+  <parameter name="PFOCollection" type="string" lcioInType="ReconstructedParticle"> PFOsminuse </parameter>
+  <parameter name="TauRecCollection" type="string" lcioOutType="ReconstructedParticle"> IsolatedTaus </parameter>
+  <parameter name="TauRecRestCollection" type="string" lcioOutType="ReconstructedParticle"> PFOsminustau </parameter>
+  <parameter name="TauRecLinkCollectionName" type="string" lcioOutType="LCRelation"> MCTauLink </parameter>
+  <parameter name="pt_cut" value="0.2" />
+  <parameter name="cosT_cut" value="0.99" />
+  <parameter name="searchConeAngle" value="0.05" />
+  <parameter name="isolationConeAngle" value="0.15" />
+  <parameter name="isolationEnergy" value="3.5" />
+  <parameter name="ptseed" value="5.0" />
+  <parameter name="invariant_mass" value="2.0" />
 </processor>
 
 <processor name="FastJetYCut" type="FastJetProcessor">
@@ -919,6 +935,7 @@
     PFOsminusmu
     PFOsminuse
     PFOsminustau
+    MCTauLink
     V0RecoParticles
     V0Vertices
     ProngRecoParticles
