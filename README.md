@@ -12,22 +12,21 @@ __These codes are under development. You can use them but your own risk. Your co
 # Things need to be done / Things need to be discussed
 
 - Include isolated photon finder
-  - Planned to include Yan's PandoraIsolatedPhotonFinder, but it used many external functions
-  - Planning to develop 
+  - will discuss with Junping for the development
 - MCParticle should be MCParticlesSkimmed
   - In next production? Validation samples produced with v02-01 only contain MCParticle
 - Simplify PandoraPFOs
-  - Only put single number on PID info. How to do it?
+  - Only put single number on PID info? How to do it?
 - Simplify RecoMCTruthLink/MCTruthRecoLink. How to do it?
-- Which collections should be kept in mini-DST file?
 - How to add number of tracks/clusters (at the event header? at the header of PandoraPFOs?)?
 - How to merge collections?
-- Providing macro or library to read mini-DST file and produce ROOT file
 
 # Introduction
 
 The purpose of mini-DST project is to provide a "minumum" set of data from fully-simulated (or SGV-based) MC samples.
-When we perform physics analysis, we should use full detector simulation samples to make your analysis as realistic as possible if you are allowed to use such MC samples and you are familiar with it.
+When we perform physics analysis, we should use full detector simulation samples to make your analysis as realistic as possible.
+Or, at least fast simulation-based MC samples are used in the physics analysis.
+Usually, these MC samples have tons amount of information.
 However, for beginners and theorists who are typically not familiar with how to handle with it, the full information of simulation/reconstruction is too much and too complex.
 The mini-DST project is reducing such complexitity, and will provide smaller file size mini-DST which still have useful information for the analysis.
 
