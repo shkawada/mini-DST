@@ -4,19 +4,28 @@ Input DST files: all physics validation samples produced with iLCSoft v02-01. se
 
 Output mini-DST files: go to /afs/desy.de/user/s/skawada/public/mini-DST-v0
 
+The next table shows that which original DST files are used to produce mini-DST files.
+|File No|processID|physics process|
+|:---:|:---:|:---:|
+|1-4|I401005|e2e2h|
+|5-9|I401006|e2e2h|
+|10-11|I401007|qqh_zz|
+|12|I499997|2f_z_l|
+|13|I499998|4f_ww_sl|
+|14|I499999|4f_sw_sl|
+
 In these mini-DST file, the following collections are stored.
 - PandoraPFOs, BCalRecoParticle (not merged yet, not simplified anything)
 - MCParticle
 - PrimaryVertex, PrimaryVertex_RP
 - RecoMCThuthLink, MCTruthRecoLink (kept full relation)
 
-The following collections are added to the mini-DST file.
+The following collections are added to the mini-DST file. All parameters/weight files are not tuned at all.
 - event shape variables (used ThrustReconstruction, Sphere, Fox): these are stored at the header of PandoraPFOs
-- IsolatedMuons, IsolatedElectrons (used IsolatedLeptonTagging, not tuned)
-- IsolatedTaus (used TaJetClustering, not tuned)
-- RefinedNJets (N = 2, 3, 4, 5, 6) (used LCFIPlus: JetClustering, JetVertexRefiner, FlavorTag, not tuned)
-
-The ErrorFlow processor is applied to RefinedNJets to calculate covariance matrix for jets.
+- IsolatedMuons, IsolatedElectrons (used IsolatedLeptonTagging)
+- IsolatedTaus (used TaJetClustering)
+- RefinedNJets (N = 2, 3, 4, 5, 6) (used LCFIPlus: JetClustering, JetVertexRefiner, FlavorTag)
+- The ErrorFlow processor is applied to RefinedNJets to calculate covariance matrix for jets.
 
 File size details:
 
