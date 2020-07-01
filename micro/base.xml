@@ -7,13 +7,7 @@
   <processor name="Fox"/>
   <processor name="IsolatedMuonTagging"/>
   <processor name="IsolatedElectronTagging"/>
-  <processor name="IsolatedTauTagging"/>
-  <!--processor name="FastJetYCut"/-->
-  <!--processor name="FastJet2"/-->
-  <!--processor name="FastJet3"/-->
-  <!--processor name="FastJet4"/-->
-  <!--processor name="FastJet5"/-->
-  <!--processor name="FastJet6"/-->
+  <processor name="IsolatedTauFinder"/>
   <processor name="JC2FT"/>
   <processor name="EF2"/>
   <processor name="JC3FT"/>
@@ -193,81 +187,18 @@
   <parameter name="Verbosity" type="string"> SILENT </parameter>
 </processor>
 
-<processor name="IsolatedTauTagging" type="TaJetClustering">
-  <!--Input PFO collection-->
+<processor name="IsolatedTauFinder" type="TauFinder">
   <parameter name="PFOCollection" type="string" lcioInType="ReconstructedParticle"> PFOsminuse </parameter>
-  <!--Tau output collection-->
-  <parameter name="OutputTauCollection" type="string" lcioOutType="ReconstructedParticle"> IsolatedTaus </parameter>
-  <!--Remained PFO collection not clustered-->
-  <parameter name="RemainPFOCollection" type="string" lcioOutType="ReconstructedParticle"> PFOsminustau </parameter>
-  <!--Tau mass for tau clustering [GeV]-->
-  <parameter name="TauMass" type="double">2 </parameter>
-  <!--Allowed cosine angle to be clustered-->
-  <parameter name="TauCosAngle" type="double">0.98 </parameter>
-  <!-- Skip ANY Primary and Cone cuts if true: should be only used in lepton-only final states! -->
-  <parameter name="NoSelection" type="int">0 </parameter>
-  <!--Primary cut include IMPLICIT selection of accepting only 1 or 3 tracks in jets: this loosen the counting of low energy tracks-->
-  <parameter name="AcceptFlexibleLowEnergyTrack" type="int">1 </parameter>
-  <!--Minimum jet energy to be accepted as taus-->
-  <parameter name="MinimumJetEnergy" type="double">3 </parameter>
-  <!--Minimum track energy to be accepted as taus-->
-  <parameter name="MinimumTrackEnergy" type="double">2 </parameter>
-  <!--Minimum track energy to be counted-->
-  <parameter name="MinimumTrackEnergyAssoc" type="double">2 </parameter>
-  <!--Minimum cosine angle for cone-->
-  <parameter name="ConeMinCosAngle" type="double">0.9 </parameter>
-  <!--Maximum cosine angle for cone-->
-  <parameter name="ConeMaxCosAngle" type="double">1 </parameter>
-  <!--Energy fraction of cone compared to central-->
-  <parameter name="ConeMaxEnergyFrac" type="double">0.1 </parameter>
-</processor>
-
-<processor name="FastJetYCut" type="FastJetProcessor">
-  <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> DurhamJetsYCuts001 </parameter>
-  <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
-  <parameter name="clusteringMode" type="StringVec"> ExclusiveYCut 0.01 </parameter>
-  <parameter name="recombinationScheme" type="string">E_scheme </parameter>
-</processor>
-
-<processor name="FastJet2" type="FastJetProcessor">
-  <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham2Jets </parameter>
-  <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
-  <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 2 </parameter>
-  <parameter name="recombinationScheme" type="string">E_scheme </parameter>
-</processor>
-
-<processor name="FastJet3" type="FastJetProcessor">
-  <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham3Jets </parameter>
-  <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
-  <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 3 </parameter>
-  <parameter name="recombinationScheme" type="string">E_scheme </parameter>
-</processor>
-
-<processor name="FastJet4" type="FastJetProcessor">
-  <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham4Jets </parameter>
-  <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
-  <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 4 </parameter>
-  <parameter name="recombinationScheme" type="string">E_scheme </parameter>
-</processor>
-
-<processor name="FastJet5" type="FastJetProcessor">
-  <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham5Jets </parameter>
-  <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
-  <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 5 </parameter>
-  <parameter name="recombinationScheme" type="string">E_scheme </parameter>
-</processor>
-
-<processor name="FastJet6" type="FastJetProcessor">
-  <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham6Jets </parameter>
-  <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
-  <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 6 </parameter>
-  <parameter name="recombinationScheme" type="string">E_scheme </parameter>
+  <parameter name="TauRecCollection" type="string" lcioOutType="ReconstructedParticle"> IsolatedTaus </parameter>
+  <parameter name="TauRecRestCollection" type="string" lcioOutType="ReconstructedParticle"> PFOsminustau </parameter>
+  <parameter name="TauRecLinkCollectionName" type="string" lcioOutType="LCRelation"> MCTauLink </parameter>
+  <parameter name="pt_cut" value="0.2" />
+  <parameter name="cosT_cut" value="0.99" />
+  <parameter name="searchConeAngle" value="0.05" />
+  <parameter name="isolationConeAngle" value="0.15" />
+  <parameter name="isolationEnergy" value="3.5" />
+  <parameter name="ptseed" value="5.0" />
+  <parameter name="invariant_mass" value="2.0" />
 </processor>
 
 <processor name="JC2FT" type="LcfiplusProcessor">
@@ -885,33 +816,6 @@
     ReconstuctedParticle
     Vertex
   </parameter>
-  <!--parameter name="DropCollectionNames" type="StringVec">
-  </parameter-->
-  <!--parameter name="DropCollectionNames" type="StringVec">
-    ClusterMCTruthLink
-    MCTruthClusterLink
-    MCTruthMarlinTrkTracksLink
-    MarlinTrkTracksMCTruthLink
-    DistilledPFOs
-    GammaGammaCandidateEtaPrimes
-    GammaGammaCandidateEtas
-    GammaGammaCandidatePi0s
-    GammaGammaParticles
-    PFOsminusmu
-    PFOsminuse
-    PFOsminustau
-    BCalRecoParticle
-    BuildUpVertex_RP
-    BuildUpVertex_V0_RP
-    KinkRecoParticles
-    PrimaryVertex_RP
-    ProngRecoParticles
-    SplitRecoParticles
-    V0RecoParticles
-  </parameter-->
-  <!--parameter name="FullSubsetCollections" type="StringVec">
-    MCParticlesSkimmed
-  </parameter-->
   <parameter name="KeepCollectionNames" type="StringVec">
     PrimaryVertex
     PrimaryVertex_RP

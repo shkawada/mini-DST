@@ -12,5 +12,3 @@ condor_submit exec10.submit
 condor_submit exec11.submit
 condor_submit exec12.submit
 condor_submit exec13.submit
-condor_submit exec14.submit
-

@@ -1,7 +1,3 @@
-/pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401005.Pe2e2h.eL.pR.n000.d_dstm_14707_0.slcio
-/pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401005.Pe2e2h.eL.pR.n000.d_dstm_14707_1.slcio
-/pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401005.Pe2e2h.eL.pR.n000.d_dstm_14707_2.slcio
-/pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401005.Pe2e2h.eL.pR.n000.d_dstm_14707_3.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401006.Pe2e2h.eL.pR.n000.d_dstm_14717_0.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401006.Pe2e2h.eL.pR.n000.d_dstm_14717_1.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401006.Pe2e2h.eL.pR.n000.d_dstm_14717_2.slcio
@@ -9,6 +5,9 @@
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401006.Pe2e2h.eL.pR.n000.d_dstm_14717_4.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401007.Pqqh_zz.eL.pR.n000.d_dstm_14721_0.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401007.Pqqh_zz.eL.pR.n000.d_dstm_14721_1.slcio
+/pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401009.P6f_llxyyx.eL.pR.n000.d_dstm_14745_0.slcio
+/pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401009.P6f_llxyyx.eL.pR.n000.d_dstm_14745_1.slcio
+/pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I401009.P6f_llxyyx.eL.pR.n000.d_dstm_14745_2.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I499997.P2f_z_l.eL.pR.n000.d_dstm_14705_0.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I499998.P4f_ww_sl.eL.pR.n000.d_dstm_14705_0.slcio
 /pnfs/desy.de/ilc/prod/ilc/mc-opt/ild/dst-merged/250-SetA/test/ILD_l5_o1_v02_nobg/v02-01/rv02-01.sv02-01.mILD_l5_o1_v02_nobg.E250-SetA.I499999.P4f_sw_sl.eL.pR.n000.d_dstm_14705_0.slcio
