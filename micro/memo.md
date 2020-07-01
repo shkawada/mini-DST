@@ -1,4 +1,6 @@
-# mini-DST files v1 (as of 2020/July/1)
+# micro-DST files using same configuration with v1 (as of 2020/July/1)
+
+This micro-DST is produced for the test of file size, but it also would be useful when you are only interested in the final products and no MC truth information.
 
 Input DST files: physics validation samples produced with iLCSoft v02-01. see sample.txt for full path.
 
@@ -14,16 +16,9 @@ The next table shows that which original DST files are used to produce mini-DST 
 |12|I499998|4f_ww_sl|
 |13|I499999|4f_sw_sl|
 
-## Difference between v0 and v1
-- The e2e2h files with processID I401005 are removed from sample.txt because these samples are created wrongly.
-- The 6f_llyxxy files (ID = I401009) are added in sample.txt.
-- The processor for isolated taus are changed from TaJetClustering to TauFinder. One reason of this change is that TaJetClustering gave us terrible performance with DBD 4f_WW_hadronic events. Another reason is that TauFinder is used most recently under ILC physics analysis.
-
-In these mini-DST file, the following collections are stored.
+In these micro-DST file, the following collections are stored.
 - PandoraPFOs, BCalRecoParticle (not merged yet, not simplified anything)
-- MCParticle
 - PrimaryVertex, PrimaryVertex_RP
-- RecoMCThuthLink, MCTruthRecoLink (kept full relation)
 
 The following collections are added to the mini-DST file. All parameters/weight files are not tuned at all.
 - event shape variables (used ThrustReconstruction, Sphere, Fox): these are stored at the header of PandoraPFOs
@@ -32,7 +27,7 @@ The following collections are added to the mini-DST file. All parameters/weight 
 - RefinedNJets (N = 2, 3, 4, 5, 6) (used LCFIPlus: JetClustering, JetVertexRefiner, FlavorTag)
 - The ErrorFlow processor is applied to RefinedNJets to calculate covariance matrix for jets.
 
-File size details:
+File size details (job in running, will modify):
 
 |File No|# events|DST (MB)|DST, (MB)/event|mini-DST (MB)|mini-DST, (MB)/event|
 |:---:|:---:|:---:|:---:|:---:|:---:|
