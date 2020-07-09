@@ -7,8 +7,9 @@
   <processor name="Fox"/>
   <processor name="IsolatedMuonTagging"/>
   <processor name="IsolatedElectronTagging"/>
-  <!--processor name="IsolatedTauTagging"/-->
-  <processor name="IsolatedTauFinder"/>
+  <processor name="IsolatedTauTagging"/>
+  <!--processor name="IsolatedTauFinder"/-->
+  <processor name="IsolatedPhotonTagging"/>
   <!--processor name="FastJetYCut"/-->
   <!--processor name="FastJet2"/-->
   <!--processor name="FastJet3"/-->
@@ -73,11 +74,11 @@
   <parameter name="CutOnTheISOMuonMVA" type="float">0.7 </parameter>
   <!--Directory of Weights for the Isolated Electron MVA Classification-->
   <parameter name="DirOfISOElectronWeights" type="string">
-  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01/MarlinReco/v01-26/Analysis/IsolatedLeptonTagging/weights/e1e1h_gg_qqqq_250
+  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01-01/MarlinReco/v01-27/Analysis/IsolatedLeptonTagging/weights/e1e1h_gg_qqqq_250
   </parameter>
   <!--Directory of Weights for the Isolated Muon MVA Classification-->
   <parameter name="DirOfISOMuonWeights" type="string">
-  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01/MarlinReco/v01-26/Analysis/IsolatedLeptonTagging/weights/e2e2h_gg_qqqq_250
+  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01-01/MarlinReco/v01-27/Analysis/IsolatedLeptonTagging/weights/e2e2h_gg_qqqq_250
 </parameter>
   <!--parameter name="DirOfISOMuonWeights" type="string">
   /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01/MarlinReco/v01-26/Analysis/IsolatedLeptonTagging/weights/yyxylv_yyxyyx_500.mILD_l5_o1_v02
@@ -140,11 +141,11 @@
   <parameter name="CutOnTheISOMuonMVA" type="float"> 2 </parameter>
   <!--Directory of Weights for the Isolated Electron MVA Classification-->
   <parameter name="DirOfISOElectronWeights" type="string">
-  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01/MarlinReco/v01-26/Analysis/IsolatedLeptonTagging/weights/e1e1h_gg_qqqq_250
+  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01-01/MarlinReco/v01-27/Analysis/IsolatedLeptonTagging/weights/e1e1h_gg_qqqq_250
   </parameter>
   <!--Directory of Weights for the Isolated Muon MVA Classification-->
   <parameter name="DirOfISOMuonWeights" type="string">
-  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01/MarlinReco/v01-26/Analysis/IsolatedLeptonTagging/weights/e2e2h_gg_qqqq_250
+  /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01-01/MarlinReco/v01-27/Analysis/IsolatedLeptonTagging/weights/e2e2h_gg_qqqq_250
 </parameter>
   <!--parameter name="DirOfISOMuonWeights" type="string">
   /cvmfs/ilc.desy.de/sw/x86_64_gcc82_sl6/v02-01/MarlinReco/v01-26/Analysis/IsolatedLeptonTagging/weights/yyxylv_yyxyyx_500.mILD_l5_o1_v02
@@ -238,6 +239,18 @@
   <parameter name="invariant_mass" value="2.0" />
 </processor>
 
+<processor name="IsolatedPhotonTagging" type="IsolatedPhotonTaggingProcessor">
+  <parameter name="InputPandoraPFOsCollection" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
+  <parameter name="OutputPFOsWithoutIsoPhotonCollection" type="string" lcioInType="ReconstructedParticle"> PFOsminusphoton </parameter>
+  <parameter name="OutputIsoPhotonsCollection" type="string" lcioInType="ReconstructedParticle"> IsolatedPhotons </parameter>
+  <parameter name="DirOfIsoPhotonWeights" type="string"> isolated_photon_weights </parameter>
+  <parameter name="CutOnTheISOPhotonMVA" type="float"> 0.5 </parameter>
+  <parameter name="IsSelectingOneIsoPhoton" type="bool"> false </parameter>
+  <parameter name="MinEForPhoton" type="float"> 5. </parameter>
+  <parameter name="CosConeSmall" type="float"> 0.98 </parameter>
+  <parameter name="CosConeLarge" type="float"> 0.95 </parameter>
+</processor>
+
 <processor name="FastJetYCut" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
   <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> DurhamJetsYCut001 </parameter>
@@ -313,7 +326,7 @@
   <parameter name="Algorithms" type="stringVec"> JetClustering JetVertexRefiner FlavorTag ReadMVA</parameter>
 
   <!-- general parameters -->
-  <parameter name="PFOCollection" type="string" value="PFOsminustau" /> <!-- input PFO collection -->
+  <parameter name="PFOCollection" type="string" value="PFOsminusphoton" /> <!-- input PFO collection -->
   <parameter name="UseMCP" type="int" value="0" /> <!-- MC info not used -->
   <parameter name="MCPCollection" type="string" value="" /> <!-- not used -->
   <parameter name="MCPFORelation" type="string" value="" /> <!-- not used -->
@@ -434,7 +447,7 @@
   <parameter name="Algorithms" type="stringVec"> JetClustering JetVertexRefiner FlavorTag ReadMVA</parameter>
 
   <!-- general parameters -->
-  <parameter name="PFOCollection" type="string" value="PFOsminustau" /> <!-- input PFO collection -->
+  <parameter name="PFOCollection" type="string" value="PFOsminusphoton" /> <!-- input PFO collection -->
   <parameter name="UseMCP" type="int" value="0" /> <!-- MC info not used -->
   <parameter name="MCPCollection" type="string" value="" /> <!-- not used -->
   <parameter name="MCPFORelation" type="string" value="" /> <!-- not used -->
@@ -555,7 +568,7 @@
   <parameter name="Algorithms" type="stringVec"> JetClustering JetVertexRefiner FlavorTag ReadMVA</parameter>
 
   <!-- general parameters -->
-  <parameter name="PFOCollection" type="string" value="PFOsminustau" /> <!-- input PFO collection -->
+  <parameter name="PFOCollection" type="string" value="PFOsminusphoton" /> <!-- input PFO collection -->
   <parameter name="UseMCP" type="int" value="0" /> <!-- MC info not used -->
   <parameter name="MCPCollection" type="string" value="" /> <!-- not used -->
   <parameter name="MCPFORelation" type="string" value="" /> <!-- not used -->
@@ -676,7 +689,7 @@
   <parameter name="Algorithms" type="stringVec"> JetClustering JetVertexRefiner FlavorTag ReadMVA</parameter>
 
   <!-- general parameters -->
-  <parameter name="PFOCollection" type="string" value="PFOsminustau" /> <!-- input PFO collection -->
+  <parameter name="PFOCollection" type="string" value="PFOsminusphoton" /> <!-- input PFO collection -->
   <parameter name="UseMCP" type="int" value="0" /> <!-- MC info not used -->
   <parameter name="MCPCollection" type="string" value="" /> <!-- not used -->
   <parameter name="MCPFORelation" type="string" value="" /> <!-- not used -->
@@ -797,7 +810,7 @@
   <parameter name="Algorithms" type="stringVec"> JetClustering JetVertexRefiner FlavorTag ReadMVA</parameter>
 
   <!-- general parameters -->
-  <parameter name="PFOCollection" type="string" value="PFOsminustau" /> <!-- input PFO collection -->
+  <parameter name="PFOCollection" type="string" value="PFOsminusphoton" /> <!-- input PFO collection -->
   <parameter name="UseMCP" type="int" value="0" /> <!-- MC info not used -->
   <parameter name="MCPCollection" type="string" value="" /> <!-- not used -->
   <parameter name="MCPFORelation" type="string" value="" /> <!-- not used -->
@@ -936,6 +949,7 @@
     PFOsminuse
     PFOsminustau
     MCTauLink
+    PFOsminusphoton
     V0RecoParticles
     V0Vertices
     ProngRecoParticles
