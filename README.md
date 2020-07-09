@@ -13,8 +13,6 @@ The full information of v0 mini-DST and v1 mini-DST are available under v0/ and 
 
 # Things need to be done / Things need to be discussed
 
-- Include isolated photon finder
-  - will discuss with Junping for the development
 - MCParticle should be MCParticlesSkimmed
   - In next production? Validation samples produced with v02-01 only contain MCParticle
 - Simplify PandoraPFOs
@@ -47,7 +45,7 @@ In mini-DST file, the following collections are kept from original DST file.
 The following collections/variables are added to the mini-DST file.
 - event shape variables (used ThrustReconstruction, Sphere, Fox): these are stored at the header of PandoraPFOs
 - IsolatedMuons, IsolatedElectrons (used IsolatedLeptonTagging, not tuned)
-- IsolatedTaus (used TauFinder, not tuned)
-- (IsolatedPhotons) (future)
+- IsolatedTaus (used TaJetClustering, not tuned)
+- IsolatedPhotons (used IsolatedPhotonTaggingProcessor, not tuned, not yet for MVA-based version)
 - RefinedNJets (N = 2, 3, 4, 5, 6) (used LCFIPlus: JetClustering, JetVertexRefiner, FlavorTag, not tuned)
 - ErrorFlow is applied to RefinedNJets to calculate covariance matrix for jets.
