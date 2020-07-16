@@ -261,7 +261,7 @@
 
 <processor name="FastJet2" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durhan2Jets </parameter>
+  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham2Jets </parameter>
   <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
   <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 2 </parameter>
   <parameter name="recombinationScheme" type="string">E_scheme </parameter>
@@ -269,7 +269,7 @@
 
 <processor name="FastJet3" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durhan3Jets </parameter>
+  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham3Jets </parameter>
   <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
   <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 3 </parameter>
   <parameter name="recombinationScheme" type="string">E_scheme </parameter>
@@ -277,7 +277,7 @@
 
 <processor name="FastJet4" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durhan4Jets </parameter>
+  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham4Jets </parameter>
   <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
   <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 4 </parameter>
   <parameter name="recombinationScheme" type="string">E_scheme </parameter>
@@ -285,7 +285,7 @@
 
 <processor name="FastJet5" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durhan5Jets </parameter>
+  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham5Jets </parameter>
   <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
   <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 5 </parameter>
   <parameter name="recombinationScheme" type="string">E_scheme </parameter>
@@ -293,7 +293,7 @@
 
 <processor name="FastJet6" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PFOsminustau </parameter>
-  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durhan6Jets </parameter>
+  <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> Durham6Jets </parameter>
   <parameter name="algorithm" type="StringVec"> ee_kt_algorithm </parameter>
   <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 6 </parameter>
   <parameter name="recombinationScheme" type="string">E_scheme </parameter>
@@ -948,7 +948,6 @@
     PFOsminusmu
     PFOsminuse
     PFOsminustau
-    MCTauLink
     PFOsminusphoton
     V0RecoParticles
     V0Vertices
@@ -1005,6 +1004,7 @@
     Refined2Jets
   </parameter-->
   <parameter name="LCIOWriteMode" type="string" value="WRITE_NEW"/>
+  <parameter name="CompressionLevel" type="int" value="6"/>
   <!--parameter name="LCIOWriteMode" type="string" value="WRITE_APPEND"/-->
   <!--parameter name="SplitFileSizekB" type="int" value="1992294"/-->
 </processor>
