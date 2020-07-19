@@ -1,4 +1,4 @@
-# mini-DST files v2 (as of 2020/July/14)
+# mini-DST files v2 (as of 2020/July/19)
 
 Input DST files: physics validation samples produced with iLCSoft v02-01. see sample.txt for full path.
 
@@ -18,6 +18,7 @@ The next table shows that which original DST files are used to produce mini-DST 
 - Now using iLCSoft v02-01-01.
 - Switch back to use TaJetClustering, will not use TauFinder anymore.
 - Started use IsolatedPhotonTaggingProcessor, which is kindly developed by Junping.
+- Added CompressionLevel parameter in LCIOOutputProcessor, which is recently introduced.
 
 In these mini-DST file, the following collections are stored.
 - PandoraPFOs, BCalRecoParticle (not merged yet, not simplified anything)
@@ -37,16 +38,16 @@ File size details:
 
 |File No|# events|DST (MB)|DST, (MB)/event|mini-DST (MB)|mini-DST, (MB)/event|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|1|10500|761|0.0725|791|0.0753|
-|2|10500|762|0.0726|792|0.0754|
-|3|10500|762|0.0726|793|0.0755|
-|4|10500|764|0.0728|794|0.0756|
-|5|8000|584|0.073|607|0.0759|
-|6|5500|680|0.1236|666|0.1211|
-|7|4500|551|0.1224|540|0.12|
-|8|6800|807|0.1187|791|0.1163|
-|9|6800|802|0.1179|785|0.1154|
-|10|6400|753|0.1177|739|0.1155|
-|11|10000|91|0.009|166|0.0166|
-|12|10000|595|0.0595|658|0.058|
-|13|10000|603|0.0603|673|0.0673|
+|1|10500|761|0.0725|319|0.0304|
+|2|10500|762|0.0726|319|0.0304|
+|3|10500|762|0.0726|320|0.0305|
+|4|10500|764|0.0728|321|0.0306|
+|5|8000|584|0.073|245|0.0306|
+|6|5500|680|0.1236|275|0.0500|
+|7|4500|551|0.1224|223|0.0500|
+|8|6800|807|0.1187|329|0.0480|
+|9|6800|802|0.1179|327|0.0480|
+|10|6400|753|0.1177|308|0.0480|
+|11|10000|91|0.009|56|0.0056|
+|12|10000|595|0.0595|264|0.0264|
+|13|10000|603|0.0603|272|0.0272|
