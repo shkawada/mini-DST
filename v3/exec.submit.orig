@@ -1,0 +1,11 @@
+executable = submitRUNNUMBER.sh
+universe = vanilla
+notify_user = shin-ichi.kawada@desy.de
+JobNotification = Error
+log = /afs/desy.de/user/s/skawada/sonas_work/mini-DST/v3prod/log/jobstatusRUNNUMBER.log
+output = /afs/desy.de/user/s/skawada/sonas_work/mini-DST/v3prod/log/outputRUNNUMBER.log
+error = /afs/desy.de/user/s/skawada/sonas_work/mini-DST/v3prod/log/errorRUNNUMBER.log
++RequestRuntime = 3600*6
+RequestMemory = 2G
+RequestDisk = 2G
+queue
