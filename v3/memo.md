@@ -1,24 +1,22 @@
-# mini-DST files v2 (as of 2020/July/19)
+# mini-DST files v3 (as of 2020/August/4)
 
-Input DST files: physics validation samples produced with iLCSoft v02-01. see sample.txt for full path.
+Input DST files: physics validation samples produced with iLCSoft v02-01-02. see sample.txt for full path.
 
-Output mini-DST files: go to /afs/desy.de/user/s/skawada/mini-DST/v2prod
+Output mini-DST files: planning to upload on DESYCLOUD
 
 The next table shows that which original DST files are used to produce mini-DST files.
 |File No|processID|physics process|
 |:---:|:---:|:---:|
-|1-5|I401006|e2e2h|
-|6-7|I401007|qqh_zz|
-|8-10|I401009|6f_llxyyx|
-|11|I499997|2f_z_l|
-|12|I499998|4f_ww_sl|
-|13|I499999|4f_sw_sl|
+|1-5|401010|e2e2h|
+|6-7|401011|qqh_zz|
+|8-10|401012|6f_llxyyx|
+|11|499989|2f_z_l|
+|12|499990|2f_z_h|
+|13|499991|4f_ww_sl|
+|14|499992|4f_sw_sl|
 
-## Difference between v1 and v2
-- Now using iLCSoft v02-01-01.
-- Switch back to use TaJetClustering, will not use TauFinder anymore.
-- Started use IsolatedPhotonTaggingProcessor, which is kindly developed by Junping.
-- Added CompressionLevel parameter in LCIOOutputProcessor, which is recently introduced.
+## Difference between v2 and v3
+- Now using iLCSoft v02-01-02. Test samples as well.
 
 In these mini-DST file, the following collections are stored.
 - PandoraPFOs, BCalRecoParticle (not merged yet, not simplified anything)
@@ -38,16 +36,17 @@ File size details:
 
 |File No|# events|DST (MB)|DST, (MB)/event|mini-DST (MB)|mini-DST, (MB)/event|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|1|10500|761|0.0725|319|0.0304|
-|2|10500|762|0.0726|319|0.0304|
-|3|10500|762|0.0726|320|0.0305|
-|4|10500|764|0.0728|321|0.0306|
-|5|8000|584|0.073|245|0.0306|
-|6|5500|680|0.1236|275|0.0500|
-|7|4500|551|0.1224|223|0.0500|
-|8|6800|807|0.1187|329|0.0480|
-|9|6800|802|0.1179|327|0.0480|
-|10|6400|753|0.1177|308|0.0480|
-|11|10000|91|0.009|56|0.0056|
-|12|10000|595|0.0595|264|0.0264|
-|13|10000|603|0.0603|272|0.0272|
+|1|10500|704|0.0670|252|0.0240|
+|2|10500|699|0.0666|250|0.0238|
+|3|10500|699|0.0666|250|0.0238|
+|4|10500|702|0.0669|251|0.0239|
+|5|8000|535|0.0669|191|0.0239|
+|6|5100|578|0.113|198|0.0390|
+|7|4900|555|0.113|190|0.0390|
+|8|6800|734|0.108|253|0.0370|
+|9|6800|736|0.108|254|0.0370|
+|10|6400|692|0.108|239|0.0370|
+|11|10000|79|0.00790|44|0.00440|
+|12|10000|620|0.0620|232|0.0232|
+|13|10000|542|0.0542|205|0.0205|
+|13|10000|541|0.0541|205|0.0205|
