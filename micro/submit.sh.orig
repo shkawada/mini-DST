@@ -1,3 +1,0 @@
-#!/bin/bash
-source /afs/desy.de/user/s/skawada/sonas_work/mini-DST/init_ilcsoft.sh
-Marlin procRUNNUMBER.xml
