@@ -1,0 +1,29 @@
+<marlin>
+
+<execute>
+  <processor name="AddPol"/>
+  <processor name="Output"/>
+</execute>
+
+<global>
+  <parameter name="LCIOInputFiles"> 
+/pnfs/desy.de/ilc/prod/ilc/mc-dbd/ild/dst-merged/250-TDR_ws/higgs_ffh/ILD_o1_v05/v01-16-p10_250/rv01-16-p10_250.sv01-14-01-p00.mILD_o1_v05.E250-TDR_ws.I106480.Pe2e2h.eR.pL-00001-DST.slcio
+  </parameter>
+  <parameter name="MaxRecordNumber" value="50" />
+  <parameter name="SkipNEvents" value="0" />
+  <parameter name="SupressCheck" value="false" />
+  <parameter name="Verbosity" options="DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT"> SILENT  </parameter>
+</global>
+
+<processor name="AddPol" type="AddPolProcessor">
+  <parameter name="InputName">
+  /pnfs/desy.de/ilc/prod/ilc/mc-dbd/ild/dst-merged/250-TDR_ws/higgs_ffh/ILD_o1_v05/v01-16-p10_250/rv01-16-p10_250.sv01-14-01-p00.mILD_o1_v05.E250-TDR_ws.I106480.Pe2e2h.eR.pL-00001-DST.slcio
+  </parameter>
+</processor>
+
+<processor name="Output" type="LCIOOutputProcessor">
+  <parameter name="LCIOOutputFile"> output.slcio </parameter>
+  <parameter name="LCIOWriteMode" type="string"> WRITE_NEW </parameter>
+</processor>
+
+</marlin>
