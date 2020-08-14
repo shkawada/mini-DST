@@ -1,0 +1,20 @@
+(as of 2020/Aug./11)
+All of them are DBD 250 GeV samples
+DST No / ID / process / pol / # MC events
+
+1 / 106479 / e2e2h / eL.pR / 17143
+2 / 106480 / e2e2h / eR.pL / 10983
+3 / 106607 / 2f_z_h / eL.pR / 35015
+4 / 106608 / 2f_z_h / eR.pL / 36926
+5 / 106551 / 4f_ww_h / eL.pR / 20000
+6 / 106552 / 4f_ww_h / eR.pL / 21576
+7 / 106577 / 4f_ww_sl / eL.pR / 38348
+8 / 106578 / 4f_ww_sl / eR.pL / 38501
+9 / 106573 / 4f_zz_h / eL.pR / 20000
+10 / 106574 / 4f_zz_h / eR.pL / 20000
+11 / 106575 / 4f_zz_sl / eL.pR / 36280
+12 / 106576 / 4f_zz_sl / eR.pL / 36876
+13 / 106559 / 4f_sze_sl / eL.pL / 44871
+14 / 106560 / 4f_sze_sl / eL.pR / 39661
+15 / 106551 / 4f_sze_sl / eR.pR / 44741
+16 / 106552 / 4f_sze_sl / eR.pL / 42188
