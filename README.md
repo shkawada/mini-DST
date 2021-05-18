@@ -14,14 +14,16 @@ The full information of v0 mini-DST and v1 mini-DST are available under v0/ and 
 # Things need to be done / Things need to be discussed
 
 - MCParticle should be MCParticlesSkimmed
-  - In next production? Validation samples produced with v02-01 only contain MCParticle
 - Simplify PandoraPFOs
   - Only put single number on PID info? How to do it?
+- Impact parameter?
 - Simplify RecoMCTruthLink/MCTruthRecoLink. How to do it?
 - How to add number of tracks/clusters (at the event header? at the header of PandoraPFOs?)?
 - How to merge collections?
 
 # Introduction
+
+Detail description will be available on arXiv.
 
 The purpose of mini-DST project is to provide a "minumum" set of data from fully-simulated (or SGV-based) MC samples.
 When we perform physics analysis, we should use full detector simulation samples to make your analysis as realistic as possible, or, at least, fast simulation-based MC samples (like SGV-based and Delphes-based) are need to be used in the physics analysis.
@@ -31,10 +33,10 @@ However, for beginners, newcomers, and theorists who are typically not familiar 
 The purpose of mini-DST project is try to reduce such complexity for beginners.
 In mini-DST project, we will produce mini-DST files which have smaller file size but still contain useful information for physics analysis.
 
-# Detail Description (WIP)
+# Detail Description
 
 We have fully-simulated MC samples named DST file which contain all information and result of simulation and reconstruction.
-In mini-DST file, the complex collections are removed, and useful information are added, e.g.; number of isolated electrons, muons, jets,...
+In mini-DST file, the complex collections are removed, and useful information are added as the ihgh-level object, e.g.; number of isolated electrons, muons, jets,...
 
 In mini-DST file, the following collections are kept from original DST file.
 - PandoraPFOs, BCalRecoParticle (not merged yet)
@@ -47,5 +49,5 @@ The following collections/variables are added to the mini-DST file.
 - IsolatedMuons, IsolatedElectrons (used IsolatedLeptonTagging, not tuned)
 - IsolatedTaus (used TaJetClustering, not tuned)
 - IsolatedPhotons (used IsolatedPhotonTaggingProcessor, not tuned, not yet for MVA-based version)
-- RefinedNJets (N = 2, 3, 4, 5, 6) (used LCFIPlus: JetClustering, JetVertexRefiner, FlavorTag, not tuned)
+- RefinedNJets (N = 2, 3, 4, 5, 6) (N can be increased to 10 for higher center-of-mass energy) (used LCFIPlus: JetClustering, JetVertexRefiner, FlavorTag, not tuned)
 - ErrorFlow is applied to RefinedNJets to calculate covariance matrix for jets.
