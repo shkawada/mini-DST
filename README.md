@@ -1,6 +1,6 @@
 # mini-DST project
 
-These codes are used to create mini-DST files.
+These codes are used to create mini-DST files. The details of mini-DST can be found at the [arXiv](https://arxiv.org/abs/2105.08622).
 
 Author: Shin-ichi Kawada (DESY)
 
