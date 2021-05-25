@@ -43,7 +43,7 @@
 <processor name="FastJetOverlay" type="FastJetProcessor">
   <parameter name="recParticleIn" type="string" lcioInType="ReconstructedParticle"> PandoraPFOs </parameter>
   <parameter name="jetOut" type="string" lcioOutType="ReconstructedParticle"> PFOsminusoverlayJets </parameter>
-  <parameter name="algorithm" type="StringVec"> ee_genkt_algorithm 1.5 1.2 </parameter>
+  <parameter name="algorithm" type="StringVec"> ee_genkt_algorithm 3.0 1.0 </parameter>
   <parameter name="clusteringMode" type="StringVec"> ExclusiveNJets 2 </parameter>
   <parameter name="recombinationScheme" type="string">E_scheme </parameter>
 </processor>
